@@ -1,24 +1,31 @@
 import React, { useState } from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import About from "./components/About";
+import ContactForm from "./components/Contact";
+import Nav from "./components/Nav";
+import Resume from "./components/Resume";
 
 function App() {
+  const [currentTab, setCurrentTab] = useState("about");
+
+  const showTab = () => {
+    switch (currentTab) {
+      case "about":
+        return <About />;
+      /* case "works":
+        return <Works />; */
+      case "contact":
+        return <ContactForm />;
+      case "resume":
+        return <Resume />;
+      default:
+        return null;
+    }
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Nav currentTab={currentTab} setCurrentTab={setCurrentTab}></Nav>
+
+      <main>{showTab()}</main>
     </div>
   );
 }
