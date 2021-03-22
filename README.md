@@ -33,7 +33,7 @@ The 'About Me' page shows on first visit.
 ![Contact](./src/assets/img/screenshot3.png)
 
 'Resume' displays skills I have acquired.  
-![Resume](./src/assets/img/screenshot3.png)
+![Resume](./src/assets/img/screenshot4.png)
 
 ## Contributing
 
