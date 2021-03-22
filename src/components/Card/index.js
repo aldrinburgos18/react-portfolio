@@ -18,7 +18,7 @@ function Card(props) {
             </a>
           </div>
           <a target="_blank" href={`${props.deploy}`}>
-            <p>Link to Deployed Application</p>
+            Link to Deployed Application
           </a>
         </div>
       </div>

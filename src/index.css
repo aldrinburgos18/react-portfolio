@@ -15,6 +15,7 @@ main {
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
   --spacing-five: calc(2.5rem);
+  background: url("./assets/img/bg.jpg");
 }
 
 * {
@@ -332,8 +333,18 @@ a {
 
 .format-content {
   max-width: 80%;
-  margin: 40px auto;
-  margin-bottom: 80px;
+  margin: 0 auto;
+  padding: 80px 0px;
+  padding-bottom: 100px;
+}
+
+#about .about-content {
+  padding-bottom: 50px;
+}
+
+#about .format-content {
+  padding: 0;
+  padding-bottom: 100px;
 }
 
 .contact-form {
@@ -348,6 +359,15 @@ a {
 .portfolio-content {
   background-color: var(--light);
   display: flex;
+  position: relative;
+  border-bottom: solid 3px black;
+}
+
+.portfolio-link {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
 }
 
 .portfolio-content h1 {
@@ -360,9 +380,15 @@ a {
   flex-direction: row-reverse;
 }
 
-.portfolio-content:nth-of-type(2n) .portfolio-text,
-.portfolio-link {
+.portfolio-content:nth-of-type(2n) .portfolio-text {
   text-align: end;
+}
+
+.portfolio-content:nth-of-type(2n) .portfolio-link {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
 }
 
 .portfolio-text {
@@ -381,19 +407,13 @@ a {
   min-height: 100%;
 }
 
-.portfolio-link {
-  display: flex;
-}
-
-.portfolio-link p {
-  padding: 0 30px;
-}
-
 .wrapper {
   top: 50%;
   left: 50%;
   width: 600px;
-  margin-bottom: 200px;
+  border: solid 4px var(--light);
+  border-radius: 50px;
+  background: white;
 }
 
 /* Style the Un-order list by setting its list-style to none */
