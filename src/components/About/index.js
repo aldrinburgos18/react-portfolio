@@ -57,7 +57,7 @@ function About() {
                 </a>
               </li>
               <li class="youtube">
-                <a href="#">
+                <a href="https://www.youtube.com/channel/UCB5XfLVUVm7iguBx8iE7rmg">
                   <i class="fa fa-youtube fa-2x" aria-hidden="true"></i>
                 </a>
               </li>

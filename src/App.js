@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import About from "./components/About";
-import ContactForm from "./components/Contact";
 import Nav from "./components/Nav";
+import Footer from "./components/Footer";
+import About from "./components/About";
+import Portfolio from "./components/Portfolio";
+import ContactForm from "./components/Contact";
 import Resume from "./components/Resume";
 
 function App() {
@@ -11,8 +13,8 @@ function App() {
     switch (currentTab) {
       case "about":
         return <About />;
-      /* case "works":
-        return <Works />; */
+      case "portfolio":
+        return <Portfolio />;
       case "contact":
         return <ContactForm />;
       case "resume":
@@ -26,6 +28,8 @@ function App() {
       <Nav currentTab={currentTab} setCurrentTab={setCurrentTab}></Nav>
 
       <main>{showTab()}</main>
+
+      <Footer></Footer>
     </div>
   );
 }

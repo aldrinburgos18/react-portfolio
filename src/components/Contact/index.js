@@ -39,44 +39,58 @@ function ContactForm() {
 
   return (
     <section className="format-content">
-      <h1 data-testid="contact">Shoot me a message! </h1>
-      <form id="contact-form" onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="name">Name:</label>
-          <input
-            type="text"
-            name="name"
-            onBlur={handleChange}
-            defaultValue={formState.name}
-          />
+      <div>
+        <h1 data-testid="contact">Let's Talk. </h1>
+        <hr />
+        <div className="contact-form">
+          <form id="contact-form" onSubmit={handleSubmit}>
+            <div>
+              <label htmlFor="name">
+                Name:
+                <br />
+              </label>
+              <input
+                type="text"
+                name="name"
+                onBlur={handleChange}
+                defaultValue={formState.name}
+              />
+            </div>
+            <div>
+              <label htmlFor="email">
+                Email address:
+                <br />
+              </label>
+              <input
+                type="email"
+                name="email"
+                onBlur={handleChange}
+                defaultValue={formState.email}
+              />
+            </div>
+            <div>
+              <label htmlFor="message">
+                Message:
+                <br />
+              </label>
+              <textarea
+                name="message"
+                rows="5"
+                onBlur={handleChange}
+                defaultValue={formState.message}
+              />
+            </div>
+            {errorMessage && (
+              <div>
+                <p className="error-text">{errorMessage}</p>
+              </div>
+            )}
+            <button data-testid="submit" type="submit">
+              Submit
+            </button>
+          </form>
         </div>
-        <div>
-          <label htmlFor="email">Email address:</label>
-          <input
-            type="email"
-            name="email"
-            onBlur={handleChange}
-            defaultValue={formState.email}
-          />
-        </div>
-        <div>
-          <label htmlFor="message">Message:</label>
-          <textarea
-            name="message"
-            rows="5"
-            onBlur={handleChange}
-            defaultValue={formState.message}
-          />
-        </div>
-        {errorMessage && (
-          <div>
-            <p className="error-text">{errorMessage}</p>
-          </div>
-        )}
-        <button data-testid="submit" type="submit">
-          Submit
-        </button>
-      </form>
+      </div>
     </section>
   );
 }
