@@ -12,18 +12,22 @@ function Card(props) {
           <div>
             <a
               target="_blank"
+              rel="noreferrer"
               href={`https://github.com/aldrinburgos18/${props.repo}`}
             >
               Link to Github Repository
             </a>
           </div>
-          <a target="_blank" href={`${props.deploy}`}>
+          <a target="_blank" rel="noreferrer" href={`${props.deploy}`}>
             Link to Deployed Application
           </a>
         </div>
       </div>
       <div className="portfolio-image">
-        <img src={require(`../../assets/img/${props.repo}.png`).default} />
+        <img
+          alt="project"
+          src={require(`../../assets/img/${props.repo}.png`).default}
+        />
       </div>
     </div>
   );

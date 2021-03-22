@@ -8,20 +8,22 @@ function Nav(props) {
       <nav>
         <div className="navbar">
           <ul className="flex-row">
-            <li className={currentTab === "about" ? "mx-2 navActive" : "mx-2"}>
+            <li
+              className={currentTab === "About Me" ? "mx-2 navActive" : "mx-2"}
+            >
               <span onClick={() => setCurrentTab("About Me")}>about me</span>
             </li>
             <li
-              className={currentTab === "portfolio" ? "mx-2 navActive" : "mx-2"}
+              className={currentTab === "Portfolio" ? "mx-2 navActive" : "mx-2"}
             >
               <span onClick={() => setCurrentTab("Portfolio")}>my works</span>
             </li>
             <li
-              className={currentTab === "contact" ? "mx-2 navActive" : "mx-2"}
+              className={currentTab === "Contact" ? "mx-2 navActive" : "mx-2"}
             >
               <span onClick={() => setCurrentTab("Contact")}>contact me</span>
             </li>
-            <li className={currentTab === "resume" ? "mx-2 navActive" : "mx-2"}>
+            <li className={currentTab === "Resume" ? "mx-2 navActive" : "mx-2"}>
               <span onClick={() => setCurrentTab("Resume")}>resumé</span>
             </li>
           </ul>

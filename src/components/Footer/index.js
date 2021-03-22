@@ -7,13 +7,21 @@ function Footer() {
         <div className="footer">
           <ul className="flex-row">
             <li>
-              <a href="https://github.com/aldrinburgos18">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/aldrinburgos18"
+              >
                 <i class="fa fa-github fa-2x" aria-hidden="true"></i>
               </a>
             </li>
             <li>⠀⠀ ⠀ </li>
             <li>
-              <a href="https://www.linkedin.com/in/aldrin-burgos-057139164/">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.linkedin.com/in/aldrin-burgos-057139164/"
+              >
                 <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
               </a>
             </li>
