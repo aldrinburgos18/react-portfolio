@@ -8,6 +8,8 @@ function Card(props) {
         <hr />
         <h4>{props.tech}</h4>
         <p>{props.description}</p>
+        <br />
+        <br />
         <div className="portfolio-link">
           <div>
             <a
