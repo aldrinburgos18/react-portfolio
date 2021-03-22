@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import About from "./components/About";
@@ -7,17 +7,24 @@ import ContactForm from "./components/Contact";
 import Resume from "./components/Resume";
 
 function App() {
-  const [currentTab, setCurrentTab] = useState("about");
+  const [currentTab, setCurrentTab] = useState("About Me");
+
+  useEffect(() => {
+    document.title =
+      currentTab === "Aldrin Burgos"
+        ? currentTab
+        : `Aldrin Burgos : ${currentTab}`;
+  }, [currentTab]);
 
   const showTab = () => {
     switch (currentTab) {
-      case "about":
+      case "About Me":
         return <About />;
-      case "portfolio":
+      case "Portfolio":
         return <Portfolio />;
-      case "contact":
+      case "Contact":
         return <ContactForm />;
-      case "resume":
+      case "Resume":
         return <Resume />;
       default:
         return null;

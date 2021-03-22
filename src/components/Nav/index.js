@@ -9,20 +9,20 @@ function Nav(props) {
         <div className="navbar">
           <ul className="flex-row">
             <li className={currentTab === "about" ? "mx-2 navActive" : "mx-2"}>
-              <span onClick={() => setCurrentTab("about")}>about me</span>
+              <span onClick={() => setCurrentTab("About Me")}>about me</span>
             </li>
             <li
               className={currentTab === "portfolio" ? "mx-2 navActive" : "mx-2"}
             >
-              <span onClick={() => setCurrentTab("portfolio")}>my works</span>
+              <span onClick={() => setCurrentTab("Portfolio")}>my works</span>
             </li>
             <li
               className={currentTab === "contact" ? "mx-2 navActive" : "mx-2"}
             >
-              <span onClick={() => setCurrentTab("contact")}>contact me</span>
+              <span onClick={() => setCurrentTab("Contact")}>contact me</span>
             </li>
             <li className={currentTab === "resume" ? "mx-2 navActive" : "mx-2"}>
-              <span onClick={() => setCurrentTab("resume")}>resumé</span>
+              <span onClick={() => setCurrentTab("Resume")}>resumé</span>
             </li>
           </ul>
         </div>
