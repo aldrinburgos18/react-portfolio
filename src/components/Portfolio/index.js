@@ -4,6 +4,14 @@ import Card from "../Card";
 function Portfolio() {
   const [projects] = useState([
     {
+      title: "Fit Club",
+      description:
+        "A social fitness application that connects fitness enthusiasts. Think of this as like a social media for gym people.",
+      tech: "HTML/CSS/ReactJS/MongoDB",
+      deploy: "https://fit-clob.herokuapp.com/",
+      repo: "fit-club",
+    },
+    {
       title: "Run Buddy",
       description:
         "A website that offers training services to fitness enthusiasts.",
